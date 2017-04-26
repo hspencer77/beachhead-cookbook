@@ -9,9 +9,8 @@ default['beachhead']["group"] = "eucalyptus"
 ######################################################################################################################
 default['beachhead']['add_epel'] = true
 default['beachhead']['repos']={
-    "enterprise-repo" => "http://builds.qa1.eucalyptus-systems.com/packages/tags/enterprise-devel/rhel/7/x86_64/",
-    "euca2ools-repo" => "http://builds.qa1.eucalyptus-systems.com/packages/tags/euca2ools-devel/rhel/7/x86_64/",
-    "eucalyptus-repo" => "http://builds.qa1.eucalyptus-systems.com/packages/tags/eucalyptus-devel/rhel/7/x86_64/"
+    "euca2ools-repo" => "http://downloads.eucalyptus.com/software/euca2ools/3.4/rhel/7/x86_64/",
+    "eucalyptus-repo" => "http://downloads.eucalyptus.com/software/eucalyptus/4.4/rhel/7/x86_64/"
 }
 # This is used to control whether the yum repo config files
 # will be placed in the standard /etc/yum.repos.d or /tmp (default /tmp)
@@ -105,8 +104,6 @@ default['beachhead']['euca_rpms']={"eucalyptus" => "4.4.0" ,
                             "eucaconsole-selinux" => true,
                             "eucanetd" => true,
                             "load-balancer-servo" => true}
-# Eucalyptus Enterprise rpms
-default['beachhead']['euca_enterprise_rpms']={}
 
 # VPC backend rpms
 default['beachhead']['euca_backend_rpms']={}

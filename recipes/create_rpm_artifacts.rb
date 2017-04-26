@@ -75,7 +75,6 @@ end
 ######################################################################################################################
 rpm_hash = node['beachhead']['euca_rpms']
 rpm_hash.merge(node['beachhead']['system_rpms'])
-rpm_hash.merge(node['beachhead']['euca_enterprise_rpms'])
 rpm_hash.merge(node['beachhead']['euca_backend_rpms'])
 rpm_hash.merge(node['beachhead']['extra_rpms'])
 yum_options = "--nogpgcheck --downloadonly --downloaddir #{rpm_subdir}"
